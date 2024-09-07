@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block body %}
+
+<h3>
+    Store 
+</h3> 
+
+<div style="display: flex;">
+    
+    <form method="POST" action="">
+        {% csrf_token %}
+        <p>Price</p>
+        <input type="number" name="min_price" value= "{{ min_price }}"> 
+        <input type="number" name="max_price" value= "{{ max_price }}"> 
+        
+        <p>Size</p>
+        {% for size in sizes %}
+        <input type="radio" name="size" value="{{ size }}"> <!--Radio button -> choose one option, all connected to the same name. Value is what is sent to the website-->
+        <label for= "{{ size }}">{{ size }}</label> <!--Button text, for tag vinculates each button the the size-->
+        {% endfor %}
+        
+        <!--!Creating buttons for each filter type-->
+        <p>Category</p>
+        {% for category in categories %}
+        <input type="radio" name="category" value="{{ category.slug }}"> 
+        <label for= "{{ category.slug }}">{{ category.name }}</label>  <!--What the person sees is after the for tag, category.name-->
+        {% endfor %}
+        
+        <p>Type</p>
+        {% for type in types %}
+        <input type="radio" name="type" value="{{ type.slug }}"> 
+        <label for= "{{ type.slug }}">{{ type.name }}</label> 
+        {% endfor %}
+
+        <button type="submit">Apply Filters</button>
+    </form>
+    
+    <div>
+        Order by:
+        <ul> <!--ul tag for creating lists-->
+            <li><a href="#" class="item-order" name="lowest-price">Lowest price</a></li> <!--'#' on href makes the clickable item redirect to itself-->
+            <li><a href="#" class="item-order" name="highest-price">Highest price</a></li> <!--Class serves as a identifier for what that type of link will do-->
+            <li><a href="#" class="item-order" name="most-sold">Most sold</a></li> <!--Name serves as a identifier for the individual item, one different for each order type-->
+        </ul>
+        {% for product in products %}
+        
+        <a href = "{% url 'view_product' product.id %}">
+            <img src="{{ product.image.url }}" width = "300" height = "450"> <!--returns the url of the image -->
+        </a>
+        <p>Product: {{ product.name }}</p>  <!-- Originally, what will be displayed in product is what is returned in its respective __str__ function on the models file-->
+        <p>Price: {{ product.price }}</p>
+        
+        {% endfor %}
+    </div>
+
+</div>
+    
+    {% endblock %}
+    

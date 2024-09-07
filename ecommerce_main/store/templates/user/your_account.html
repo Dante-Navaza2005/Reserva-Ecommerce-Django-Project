@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<h3>
+    Your account
+</h3>
+<a href="{% url 'my_orders' %}">My orders</a>
+
+<a href="{% url 'perform_logout' %}">Logout</a>
+
+{% if altered_account %}
+<p>Account information succesfully saved</p>
+{% endif %}
+{% if altered_password %}
+<p>Password succesfully altered</p>
+{% endif %}
+
+{% if error == "invalid_current_password" %}
+<p>Wrong current password</p>
+{% endif %}
+
+{% if error == "different_passwords" %}
+<p>Password confirmation doesn't match</p>
+{% endif %}
+
+{% if error == "email_exists" %}
+<p>Email in use</p>
+{% endif %}
+
+{% if error == "invalid_changes" %}
+<p>Invalid changes, try again</p>
+{% endif %}
+
+{% if error == "weak_password" %}
+<p>Invalid password. Ensure it has 8 to 20 characters, with least one upper, lower, numeric and special</p>
+{% endif %}
+
+{% if error == "same_password" %}
+<p>New password is the same as the previous one</p>
+{% endif %}
+
+
+
+<h3>Account information</h3>
+<form method="POST" action="{%url 'your_account' %}">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Full Name" 
+    {% if request.user.client.name %}
+    value="{{ request.user.client.name }}"
+    {% endif %}>
+    <input type="email" name="email" placeholder="Email" value="{{ request.user.email }}"> <!--Initializing the textbox with the users email (all users have a email associated)-->
+    <input type="number" name="phone" placeholder="Telephone" value="{{ request.user.client.phone }}">
+    <button type="submit">Save</button>
+</form>
+
+<hr>
+
+<h3>Change Password</h3>
+<form method="POST" action="{% url 'your_account' %}">
+    {% csrf_token %}
+    <input type="password" name="current_password" placeholder="Current Password">
+    <input type="password" name="new_password" placeholder="New Password">
+    <input type="password" name="confirm_new_password" placeholder="Confirm new password">
+    <button type="submit">Change Password</button>
+
+</form>
+
+{% endblock %}

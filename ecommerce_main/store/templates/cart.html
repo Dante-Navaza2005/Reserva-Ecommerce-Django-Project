@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+{% if existing_client %}
+
+    <h3>Cart</h3>
+
+    <h4>Order ID: {{ order.id }}</h4>
+    <p>Total Price: R$ {{ order.total_cost }}</p>
+    <p>Total Quantity: {{ order.total_quantity }}</p>
+    {% for item in items_ordered %}
+    <p>
+        <img src="{{ item.itemstock.product.image.url }}" width = "60" height = "80">
+        Product: {{ item.itemstock.product.name }}; 
+        Color: {{ item.itemstock.color.name }}; 
+        Size: {{ item.itemstock.size }}; 
+        
+        <div style="display:flex;"> <!--Makes everything in the same line-->
+            Quantity: 
+            <!--! REMOVE BUTTON -->
+            <form method = "POST" action = "{% url 'remove_from_cart' item.itemstock.product.id %}"> <!--? Changed the product reference to the one being used in the code above-->
+                {% csrf_token %} <!--Protects (by generating a unique token) the forms from hackers trying to replicate it-->
+                <input type="hidden" name="size" value="{{ item.itemstock.size }}">
+            <input type="hidden" name="color" value="{{ item.itemstock.color.id }}">
+            <button type="submit">-</button> 
+            </form>
+
+            {{ item.quantity}}
+            <!--! ADD BUTTON -->
+            <form method = "POST" action = "{% url 'add_to_cart' item.itemstock.product.id %}"> <!--? Changed the product reference to the one being used in the code above-->
+                {% csrf_token %} <!--Protects (by generating a unique token) the forms from hackers trying to replicate it-->
+            <input type="hidden" name="size" value="{{ item.itemstock.size }}">
+            <input type="hidden" name="color" value="{{ item.itemstock.color.id }}">
+            <button type="submit">+</button> 
+            </form>;
+        </div>
+        Unit Price: {{ item.itemstock.product.price }}; 
+        Total Price: R${{ item.total_price }}
+    </p>
+    <hr> <!--Horizonal row-->
+    {% endfor %}
+    <a href = "{% url 'checkout' %}">Checkout</a>
+
+{% else %}
+
+    <h3>Your cart is empty</h3>
+    <a href = "{% url 'store' %}">Visit our store</a>
+
+{% endif %}
+
+{% endblock %}

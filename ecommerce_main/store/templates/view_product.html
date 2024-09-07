@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<h3>{{ product.name }}</h3> 
+
+{% if has_stock %}
+
+<img src="{{ product.image.url }}" width = "300" height = "450"> <!--returns the url of the image -->
+<p>Product: {{ product.name }}</p>  <!-- Originally, what will be displayed in product is what is returned in its respective __str__ function on the models file-->
+<p>Price: {{ product.price }}</p>
+
+{% if selected_color %}
+
+Color: {{ selected_color.name }}
+
+{% endif %}
+
+{% for color in colors %}
+
+<a href = "{% url 'view_product' product.id color.id %}"> <!--passing the url of 'view_product' determined in the name parameter of the urls.py, followed by the product.id and the color.id -->
+    <i class="fa-solid fa-circle" style="color: {{ color.code }}"></i> <!--False positive, html doesnt recognize the django format but it is correct -->
+</a>
+{% endfor %}
+
+
+{% if sizes %}
+<form method = "POST" action = "{% url 'add_to_cart' product.id %}"> <!--Forms in django need to specify its method, action (where it will be sent)-->
+    {% csrf_token %} <!--Protects (by generating a unique token) the forms from hackers trying to replicate it-->
+    <p>Select the size:</p>
+    {% for size in sizes %}
+    <input type="radio" name="size" value="{{ size }}"> <!--Radio button -> choose one option, all connected to the same name. Value is what is sent to the website-->
+    <label for= "{{ size }}">{{ size }}</label> <!--Button text, for tag vinculates each button the the size-->
+    {% endfor %}
+
+    <input type="hidden" name="color" value="{{ selected_color.id }}">
+    <button type = "submit">Add to Cart</button> <!--Button type submit is used to send the form its in-->
+</form>
+{% endif %}
+
+
+{% else %}
+
+<p>Out of Stock</p>
+
+{% endif %}
+
+{% endblock %}

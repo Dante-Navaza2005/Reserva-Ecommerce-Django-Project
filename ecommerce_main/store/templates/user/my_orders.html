@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<h3>
+    My orders
+</h3>
+<a href="{% url 'your_account' %}">My account</a>
+
+{% for order in orders %}
+<div style="display: flex;">
+    <p>Date: {{ order.end_date }}</p>
+    <p>Order ID: {{ order.id }}</p>
+    <p>Transaction ID: {{ order.id_transaction }}</p>
+    <p>Total Price: {{ order.total_cost }}</p>
+    <p>Adress: {{ order.adress.zip_code }}, {{ order.adress.city }}-{{ order.adress.state }}</p>
+
+    {% for item in order.items %}
+        <img src= "{{ item.itemstock.product.image.url }}" width="50" height="75">
+        <p>Product: {{ item.itemstock.product.name }}</p>
+        <p>Quantity: {{item.quantity }}</p>
+        <p>Total price: {{item.total_price }}</p>
+    {% endfor %}
+</div>
+<hr>
+{% endfor %}
+
+{% endblock %}

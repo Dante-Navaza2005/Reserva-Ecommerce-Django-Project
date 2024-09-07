@@ -1,0 +1,26 @@
+{% load static %}
+<nav>
+    <a href = "{% url 'homepage' %}">Reserva</a>
+    <a href = "{% url 'store' %}">Store</a>
+    <div style="display: flex;">
+        {% for category in categories_navbar %}
+        <div>
+            <a href="{% url 'store' %}{{ category.slug }}">{{ category.name }}</a>
+            <br>
+            {% for type in types_navbar %}
+                <a href="{% url 'store' %}{{ category.slug }}-{{ type.slug }}">{{ type.name }}</a>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+
+    {% if request.user.is_authenticated %}
+        <a href = "{% url 'your_account' %}">My Account</a>
+    {% else %}
+        <a href = "{% url 'perform_login' %}">Login</a>
+    {% endif %}
+    <a href = "{% url 'cart' %}">Cart</a>
+    <img src = "{% static 'images/cart.png' %}" width="30" height="30">
+    {{ product_amount_cart }}
+
+</nav>

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<h3>
+    Add Address
+</h3>
+<a href="{% url 'checkout' %}">Return to checkout</a>
+
+<h3>Add a new address</h3>
+<form method="POST" action="{% url 'add_address' %}">
+    {% csrf_token %}
+    <!--Adding the inputs based on the attributes of the Address class-->
+    <input type="text" name="street" placeholder="Street">
+    <input type="number" name="number" placeholder="Number">
+    <input type="text" name="apartment" placeholder="Apartment">
+    <input type="number" name="zip_code" placeholder="Zip Code">
+    <input type="text" name="city" placeholder="City">
+    <input type="text" name="state" placeholder="State">
+    <button type="submit">Add address</button>
+</form>
+
+
+{% endblock %}

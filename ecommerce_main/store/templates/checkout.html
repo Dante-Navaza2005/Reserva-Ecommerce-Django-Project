@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<h3>
+    Checkout
+</h3>
+
+<a href = "{% url 'cart' %}">Return to Cart</a>
+
+<h4>Order ID: {{ order.id }}</h4>
+<p>Total Price: R$ {{ order.total_cost }}</p>
+<p>Total Quantity: {{ order.total_quantity }}</p>
+
+{% if error %}
+
+    {% if error == "conflicting_cost" %}
+        <p>Invalid product total cost. Try again or return to the cart.</p>
+    {% endif %}
+        
+    {% if error == "adress" %}
+        <p>Select a delivery adress to continue.</p>
+    {% endif %}
+        
+    {% if error == "email" %}
+        <p>Fill in your email to continue.</p>
+    {% endif %}
+{% endif %}
+
+<form method="POST" action="{% url 'finish_order' order.id %}">
+        {% csrf_token %}
+        <h3>Select the delivery address</h3>
+        <a href="{% url 'add_address' %}">delivery address</a>
+        <br>
+    {% for address in addresses %}
+        <input type="radio" name="adress" value="{{ address.id }}"> <!--Radio button -> choose one option, all connected to the same name. Value is what is sent to the website-->
+        <label for= "{{ address.id }}">{{ address.city }} - {{ address.state }} - {{ address.street }} - {{ address.number }} - {{ address.apartment }} - {{ address.zip_code }}</label> <!--Button text, for tag vinculates each button the the size-->
+        <br>
+    {% endfor %}
+
+    {% if not request.user.is_authenticated %} 
+        <hr>
+        <h4>Fill in your email to finish your order</h4>
+        <input type="email" name="email" placeholder="email"> <!--Placeholder is the transparent text that appears before-->
+    {% endif %}
+    <hr>
+    <input type="hidden" value="{{ order.total_cost }}" name="total">
+    <button type="submit">Confirm Order - R$ {{ order.total_cost }}</button>
+</form>
+
+
+{% endblock %}

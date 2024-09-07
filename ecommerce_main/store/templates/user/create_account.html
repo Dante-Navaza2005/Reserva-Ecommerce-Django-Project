@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<h3>
+    Fill in your information to create a account
+</h3>
+
+{% if error == "fill" %}
+<p>Please complete all fields correctly to create an account.</p>
+{% endif %}
+
+{% if error == "invalid_email" %}
+<p>Invalid email address. Please enter a valid email and try again.</p>
+{% endif %}
+
+{% if error == "user_exists" %}
+<p>Email already in use. <a href="{% url 'perform_login' %}">Perform login</a></p>
+{% endif %}
+
+{% if error == "different_password" %}
+<p>Passwords do not match. Please ensure both fields are identical.</p>
+{% endif %}
+
+{% if error == "weak_password" %}
+<p>Invalid password. Ensure it meets the criteria</p>
+{% endif %}
+
+<form method="POST" action="{% url 'create_account' %}">
+    {% csrf_token %}
+    <input type="email" name="email" placeholder="Email">
+    <input type="password" name="password" placeholder="Password">
+    <input type="password" name="confirm_password" placeholder="Confirm Password">
+    <p>Password must be 8 to 20 characters with at least one upper and lower case letter, number, and special. </p>
+    <button type="submit">Create Account</button>
+</form>
+
+<a href="{% url 'perform_login' %}">Already have a account? Log in</a>
+{% endblock %}
