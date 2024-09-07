@@ -146,6 +146,4 @@ EMAIL_USE_TLS = True #? encryption
 EMAIL_HOST_USER = "your_email_goes_here"
 EMAIL_HOST_PASSWORD = "youe_email_host_password_goes_here"
 
-#! classified info, encrypt later
-
 
