@@ -22,3 +22,11 @@ def category_type(request) :
     categories_navbar = Categoric.objects.all() 
     types_navbar = Type.objects.all()
     return {"categories_navbar" : categories_navbar, "types_navbar" : types_navbar}
+
+def is_part_of_team(request) :
+    team = False
+    if request.user.is_authenticated:
+        if request.user.groups.filter(name="Team").exists(): #? if the user is authenticated and the group Team is created (parameters obtained from admin page)
+            team = True
+    return {"Team" : team}
+

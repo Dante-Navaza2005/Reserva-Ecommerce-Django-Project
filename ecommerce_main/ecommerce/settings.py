@@ -67,6 +67,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'store.new_context.cart',
                 'store.new_context.category_type',
+                'store.new_context.is_part_of_team',
             ],
         },
     },
@@ -145,5 +146,3 @@ EMAIL_PORT = 587 #? port gmail uses
 EMAIL_USE_TLS = True #? encryption
 EMAIL_HOST_USER = "your_email_goes_here"
 EMAIL_HOST_PASSWORD = "youe_email_host_password_goes_here"
-
-

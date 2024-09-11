@@ -401,5 +401,7 @@ def perform_logout(request) :
     logout(request)
     return redirect('perform_login')
 
-#! Always when a user creates a account on the website we will create a client for him
+@login_required
+def manage_store(request):
+    return render(request,"internal/manage_store.html")
 
