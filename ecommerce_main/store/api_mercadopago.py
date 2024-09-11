@@ -27,7 +27,7 @@ def create_payment(items_ordered, link) :
             "success": link,
             "failure": link,
             "pending": link,
-        },
+        }, 
     }
 
     # Create a preference
