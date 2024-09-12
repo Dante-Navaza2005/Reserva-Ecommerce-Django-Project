@@ -7,4 +7,17 @@
     Manage store
 </h3>
 
+<p>Sales: {{ sales }}</p>
+<p>Products Sold: {{ products_sold }}</p>
+<p>Total Orders: {{ total_orders }}</p>
+
+<hr>
+<h3>Export Reports</h3>
+
+<a href="{% url 'export_report' 'orders' %}">Export Orders</a> <!--In '' because we want to pass a text as parameter-->
+<a href="{% url 'export_report' 'client' %}">Export Clients</a>
+<a href="{% url 'export_report' 'address' %}">Export Addresses</a>
+
 {% endblock %}
+
+

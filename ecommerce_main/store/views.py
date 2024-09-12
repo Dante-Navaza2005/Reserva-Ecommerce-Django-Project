@@ -403,5 +403,18 @@ def perform_logout(request) :
 
 @login_required
 def manage_store(request):
-    return render(request,"internal/manage_store.html")
+    if request.user.groups.filter(name="Team").exists():
+        
+        orders_finished = Order.objects.filter(finished=True)
+        total_orders = len(orders_finished)
+        sales = sum(order.total_cost for order in orders_finished)
+        products_sold = sum(order.total_quantity for order in orders_finished)
+        context = {"total_orders": total_orders, "products_sold": products_sold, "sales": sales}
+        return render(request,"internal/manage_store.html", context=context)
+    else:
+        redirect('store')
 
+@login_required
+def export_report(request, report):
+    print(report)
+    return redirect('manage_store')

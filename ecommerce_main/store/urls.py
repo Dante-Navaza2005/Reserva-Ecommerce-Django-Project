@@ -26,6 +26,7 @@ urlpatterns = [
     path('performlogout/', perform_logout, name="perform_logout"),
 
     path('managestore/', manage_store, name="manage_store"),
+    path('exportreport/<str:report>/', export_report, name="export_report"),
 
     path("password_change/", views.PasswordChangeView.as_view(), name="password_change"),
     path("password_change/done/", views.PasswordChangeDoneView.as_view(), name="password_change_done"),
