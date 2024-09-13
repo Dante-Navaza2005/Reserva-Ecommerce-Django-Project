@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loja Reserva</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="shortcut icon"
+      type="imagem/png"
+      sizes="192x228"
+      href="https://www.usereserva.com/arquivos/favicon.png"
+      data-react-helmet="true"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <!-- Adicionar a classe 'filtro-aberto' quando estiver abaixo de 950px e clicarem no botão 'Filtrar'-->
+  <body class="">
+    <header class="cabecalho">
+      <div class="cabecalho__menu">
+        <img
+          class="cabecalho__menu-icone"
+          src="Imagens/menu.svg"
+          alt="Ícone Menu"
+        />
+        <p class="cabecalho__menu-x">X</p>
+      </div>
+
+      <div class="cabecalho__container">
+        <a href="https://www.usereserva.com/">
+          <img
+            src="https://lojausereserva.vtexassets.com/assets/vtex/assets-builder/lojausereserva.lojausereserva-theme/5.0.16/icons/logo-black-rsv___e6008150aa5a6134f9a0ae5fe52a06d3.svg"
+            alt="Logo da Reserva"
+            class="cabecalho__logo"
+          />
+        </a>
+
+        <nav class="cabecalho__navegacao">
+          <ul class="cabecalho__lista">
+            <li class="cabecalho__item-lista">
+              <a
+                class="cabecalho__link"
+                href="https://www.usereserva.com/colecao-reserva/masculino"
+                >Masculino</a
+              >
+
+              <div class="cabecalho__expansao-tipos">
+                <a
+                  class="cabecalho__imagem-link"
+                  href="https://www.usereserva.com/colecao-reserva/adulto-top-camisetas"
+                  ><img
+                    src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/a3e95dbb-4c70-4dfe-9dc9-8fb997e4887b___9eafa5e48e1c6ce4a9c97682c2249c53.jpg"
+                    alt="Imagem do menu secundário"
+                    class="cabecalho__imagem"
+                /></a>
+
+                <ul class="cabecalho__lista cabecalho__lista--tipo">
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                </ul>
+
+                <ul class="cabecalho__lista cabecalho__lista--tipo">
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="cabecalho__item-lista">
+              <a
+                class="cabecalho__link"
+                href="https://www.usereserva.com/reversa"
+                >Feminino</a
+              >
+
+              <div class="cabecalho__expansao-tipos">
+                <a
+                  class="cabecalho__imagem-link"
+                  href="https://www.usereserva.com/colecao-reserva/adulto-top-camisetas"
+                  ><img
+                    src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/a3e95dbb-4c70-4dfe-9dc9-8fb997e4887b___9eafa5e48e1c6ce4a9c97682c2249c53.jpg"
+                    alt="Imagem do menu secundário"
+                    class="cabecalho__imagem"
+                /></a>
+
+                <ul class="cabecalho__lista cabecalho__lista--tipo">
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Vestido</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Vestido</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Vestido</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Vestido</a
+                    >
+                  </li>
+                </ul>
+
+                <ul class="cabecalho__lista cabecalho__lista--tipo">
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Vestido</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Vestido</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Vestido</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Vestido</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="cabecalho__item-lista">
+              <a class="cabecalho__link" href="https://www.usereserva.com/mini"
+                >Infantil</a
+              >
+
+              <div class="cabecalho__expansao-tipos">
+                <a
+                  class="cabecalho__imagem-link"
+                  href="https://www.usereserva.com/colecao-reserva/adulto-top-camisetas"
+                  ><img
+                    src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/a3e95dbb-4c70-4dfe-9dc9-8fb997e4887b___9eafa5e48e1c6ce4a9c97682c2249c53.jpg"
+                    alt="Imagem do menu secundário"
+                    class="cabecalho__imagem"
+                /></a>
+
+                <ul class="cabecalho__lista cabecalho__lista--tipo">
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                </ul>
+
+                <ul class="cabecalho__lista cabecalho__lista--tipo">
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="cabecalho__item-lista">
+              <a
+                class="cabecalho__link"
+                href="https://www.usereserva.com/calcados"
+                >Calçados</a
+              >
+
+              <div class="cabecalho__expansao-tipos">
+                <a
+                  class="cabecalho__imagem-link"
+                  href="https://www.usereserva.com/colecao-reserva/adulto-top-camisetas"
+                  ><img
+                    src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/a3e95dbb-4c70-4dfe-9dc9-8fb997e4887b___9eafa5e48e1c6ce4a9c97682c2249c53.jpg"
+                    alt="Imagem do menu secundário"
+                    class="cabecalho__imagem"
+                /></a>
+
+                <ul class="cabecalho__lista cabecalho__lista--tipo">
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                </ul>
+
+                <ul class="cabecalho__lista cabecalho__lista--tipo">
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="cabecalho__item-lista">
+              <a class="cabecalho__link" href="https://www.usereserva.com/prime"
+                >Prime</a
+              >
+
+              <div class="cabecalho__expansao-tipos">
+                <a
+                  class="cabecalho__imagem-link"
+                  href="https://www.usereserva.com/colecao-reserva/adulto-top-camisetas"
+                  ><img
+                    src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/a3e95dbb-4c70-4dfe-9dc9-8fb997e4887b___9eafa5e48e1c6ce4a9c97682c2249c53.jpg"
+                    alt="Imagem do menu secundário"
+                    class="cabecalho__imagem"
+                /></a>
+
+                <ul class="cabecalho__lista cabecalho__lista--tipo">
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                </ul>
+
+                <ul class="cabecalho__lista cabecalho__lista--tipo">
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="cabecalho__item-lista">
+              <a
+                class="cabecalho__link"
+                href="https://www.usereserva.com/faca-vc"
+                >Personalização</a
+              >
+
+              <div class="cabecalho__expansao-tipos">
+                <a
+                  class="cabecalho__imagem-link"
+                  href="https://www.usereserva.com/colecao-reserva/adulto-top-camisetas"
+                  ><img
+                    src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/a3e95dbb-4c70-4dfe-9dc9-8fb997e4887b___9eafa5e48e1c6ce4a9c97682c2249c53.jpg"
+                    alt="Imagem do menu secundário"
+                    class="cabecalho__imagem"
+                /></a>
+
+                <ul class="cabecalho__lista cabecalho__lista--tipo">
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                </ul>
+
+                <ul class="cabecalho__lista cabecalho__lista--tipo">
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="cabecalho__item-lista">
+              <a
+                class="cabecalho__link cabecalho__link--ofertas"
+                href="https://www.usereserva.com/colecao-reserva/ofertas"
+                >Ofertas</a
+              >
+
+              <div class="cabecalho__expansao-tipos">
+                <a
+                  class="cabecalho__imagem-link"
+                  href="https://www.usereserva.com/colecao-reserva/adulto-top-camisetas"
+                  ><img
+                    src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/a3e95dbb-4c70-4dfe-9dc9-8fb997e4887b___9eafa5e48e1c6ce4a9c97682c2249c53.jpg"
+                    alt="Imagem do menu secundário"
+                    class="cabecalho__imagem"
+                /></a>
+
+                <ul class="cabecalho__lista cabecalho__lista--tipo">
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                </ul>
+
+                <ul class="cabecalho__lista cabecalho__lista--tipo">
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="cabecalho__link cabecalho__link--tipo"
+                      href="https://www.usereserva.com/reversa/feminino/colecao/blusas"
+                      >Blusa</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="cabecalho__icones">
+        <div class="cabecalho__icone-login">
+          <!-- Para trocar o ícone basta adicionar a classe 'cabecalho__link-icone--logado' na âncora abaixo -->
+          <a class="cabecalho__link-icone" href="javascript: void(0)">
+            <svg class="cabecalho__icone" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8 1.333a3.332 3.332 0 100 6.662 3.332 3.332 0 100-6.662zM3.334 4.664A4.665 4.665 0 018 0a4.665 4.665 0 110 9.328 4.665 4.665 0 01-4.666-4.664zm2 8.662A3.333 3.333 0 002 16.657v1.996h12v-1.996a3.333 3.333 0 00-3.333-3.333H5.334zM.667 16.657a4.666 4.666 0 014.667-4.666h5.333a4.666 4.666 0 014.667 4.666v3.33H.667v-3.33z"
+                fill="inherit"
+              />
+            </svg>
+            <svg
+              class="cabecalho__icone cabecalho__icone--logado"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.8496 15.3103C15.526 13.6954 12.9549 12.5999 9.99992 12.5999C7.04496 12.5999 4.47379 13.6954 3.15028 15.3103M16.8496 15.3103C17.9885 13.8434 18.6666 12.0009 18.6666 9.99992C18.6666 5.21345 14.7864 1.33325 9.99992 1.33325C5.21345 1.33325 1.33325 5.21345 1.33325 9.99992C1.33325 12.0009 2.01135 13.8434 3.15028 15.3103M16.8496 15.3103C15.264 17.3525 12.7854 18.6666 9.99992 18.6666C7.21439 18.6666 4.7358 17.3525 3.15028 15.3103M13.4666 7.39992C13.4666 9.31451 11.9145 10.8666 9.99992 10.8666C8.08533 10.8666 6.53325 9.31451 6.53325 7.39992C6.53325 5.48533 8.08533 3.93325 9.99992 3.93325C11.9145 3.93325 13.4666 5.48533 13.4666 7.39992Z"
+                stroke="inherit"
+              />
+            </svg>
+          </a>
+
+          <!-- Para exibir o menu do perfil, basta adicionar a classe 'cabecalho__informacoes-perfil--aberto' na div abaixo -->
+          <div class="cabecalho__informacoes-perfil">
+            <p class="cabecalho__texto">Olá, <span>João</span>!</p>
+            <a
+              class="cabecalho__link cabecalho__link--perfil"
+              href="minha-conta.html"
+              >Minha Conta</a
+            >
+            <a
+              class="cabecalho__link cabecalho__link--perfil"
+              href="meus-pedidos.html"
+              >Meus Pedidos</a
+            >
+            <hr />
+            <a class="cabecalho__link cabecalho__link--perfil" href="">Sair</a>
+          </div>
+        </div>
+
+        <div class="cabecalho__icone-carrinho">
+          <a class="cabecalho__link-icone" href="carrinho.html">
+            <svg
+              class="cabecalho__icone cabecalho__icone--menor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.328 5.484a.656.656 0 00-.672-.613h-2.219v-.613C12.437 1.903 10.454 0 8 0S3.563 1.903 3.563 4.258v.613H1.378a.656.656 0 00-.672.613L0 19.323c0 .16.067.322.168.451A.615.615 0 00.672 20h14.656c.37 0 .672-.29.672-.645l-.672-13.871zm-1.311.645l.639 12.58H1.377l.639-12.548c4.217-.015 8.103-.032 12-.032zm-9.11-1.258v-.613C4.908 2.613 6.287 1.29 8 1.29s3.092 1.323 3.092 2.968v.613H4.908z"
+                fill="inherit"
+              />
+              <path
+                d="M11.81 16.37c-.127-.102-.7-.511-.986-.784-.095-.103-.032-.24-.16-.342l-.477-.512c-.19-.204-.35-.41-.509-.614-.159-.205-.604-.887-.955-1.331-.413-.478-1.145-1.058-1.368-1.604 0-.034-.032-.068-.032-.102a3.213 3.213 0 01-.063-.58c0-.205.063-.444.286-.785.255-.41.19-.58.127-.58-.095 0-.159 0-.095-.41.063-.376.032-.512-.032-.615-.032-.068-.095-.136-.16-.102-.095.034-.19.273-.286.341-.031.034-.159.103-.127-.239 0-.068-.032-.102-.127-.068-.096.068-.255.24-.35.58 0 .035-.032.035-.032 0 0-.034-.032-.136 0-.273.032-.136.064-.239.032-.239-.064-.034-.16.137-.223.308 0 .034 0 .034-.032.068 0 .034-.032.034-.032 0s0-.068.032-.137v-.034c-.032 0-.063 0-.095.034-.064.069-.16.171-.191.308v.477c0 .034-.064.034-.064.137.032.205.127.41.16.512 0 .034 0 .068-.033.102-.19.068-.636.205-.986.444-.032 0-.032.034-.032.068.032.034.064.034.064 0 .382-.136.923-.307 1.177-.136.191.136.223.511.096.887-.032.136-.096.273-.128.41-.54 1.57.478 2.286 1.4 3.242.064.068.223.239.35.443.096.137.192.307.192.478 0 .137-.032.307-.064.512-.064.239-.095.136-.477.034-.128-.034-.128-.034-.191.137-.064.17-.096.204-.064.204s.7 0 .796.034h.031c.096.035.478.24.573.342.032.034.064 0 .064 0 .032-.034 0-.068-.032-.068-.159-.103-.509-.41-.54-.478 0-.034.031-.17.031-.273.064-.444.064-.615.255-.683.159-.068.509.137.795.205 0 0 .032 0 .032.034a1.5 1.5 0 01-.095.307c0 .034-.032.069-.064.103-.064.034-.287-.069-.446-.103-.063-.034-.095-.068-.222.273v.034s.668.035.763.069c.032 0 .032 0 .064.034.255.136.446.239.573.341.063.034.095.068.127.034s0-.068-.032-.102c0 0-.159-.137-.318-.24-.127-.102-.286-.17-.255-.238 0-.034.032-.102.032-.137 0-.034.064-.204.064-.307l.032-.034c.7.273.923.751 1.464 1.058.573.341 1.304.034.763-.444z"
+                fill="inherit"
+              />
+            </svg>
+          </a>
+          <div class="cabecalho__itens cabecalho__itens--visivel">2</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="principal principal--padding-b">
+      <section class="loja">
+        <div class="menu">
+          <div class="menu__cabecalho">
+            <div class="menu__titulos">
+              <div>
+                <img
+                  class="menu__icone"
+                  src="Imagens/filter-big-1-svgrepo-com.svg"
+                  alt="Ícone filtrar"
+                />
+              </div>
+              <p class="menu__titulo">Filtrar</p>
+            </div>
+
+            <p class="menu__fechar-filtro">X</p>
+          </div>
+
+          <div class="menu__preco">
+            <p class="menu__subtitulo">Faixa de Preço</p>
+
+            <div class="range_container">
+              <div class="sliders_control">
+                <input
+                  id="fromSlider"
+                  type="range"
+                  value="0"
+                  min="0"
+                  max="1000"
+                />
+                <input
+                  id="toSlider"
+                  type="range"
+                  value="1000"
+                  min="0"
+                  max="1000"
+                />
+              </div>
+
+              <div class="menu__controles">
+                <div class="form_control">
+                  <div class="form_control_container">
+                    <input
+                      class="form_control_container__time__input"
+                      type="number"
+                      id="fromInput"
+                      value="0"
+                      min="0"
+                      max="1000"
+                    />
+                  </div>
+                  <p>até</p>
+                  <div class="form_control_container">
+                    <input
+                      class="form_control_container__time__input"
+                      type="number"
+                      id="toInput"
+                      value="1000"
+                      min="0"
+                      max="1000"
+                    />
+                  </div>
+                </div>
+
+                <button class="menu__botao">Filtrar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu__expansivel">
+            <div class="menu__expansivel-cabecalho">
+              <p class="menu__subtitulo">Cor</p>
+            </div>
+
+            <div class="menu__expansivel-conteudo">
+              <div class="menu__cores">
+                <div class="menu__cor">
+                  <div class="menu__cor-quadrado"></div>
+                  <div class="menu__cor-texto">Azul</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="Azul"
+                    value="Azul"
+                  />
+                </div>
+
+                <div class="menu__cor">
+                  <div class="menu__cor-quadrado"></div>
+                  <div class="menu__cor-texto">Azul</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="Azul"
+                    value="Azul"
+                  />
+                </div>
+
+                <div class="menu__cor">
+                  <div class="menu__cor-quadrado"></div>
+                  <div class="menu__cor-texto">Azul</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="Azul"
+                    value="Azul"
+                  />
+                </div>
+
+                <div class="menu__cor">
+                  <div class="menu__cor-quadrado"></div>
+                  <div class="menu__cor-texto">Azul</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="Azul"
+                    value="Azul"
+                  />
+                </div>
+
+                <div class="menu__cor">
+                  <div class="menu__cor-quadrado"></div>
+                  <div class="menu__cor-texto">Azul</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="Azul"
+                    value="Azul"
+                  />
+                </div>
+
+                <div class="menu__cor">
+                  <div class="menu__cor-quadrado"></div>
+                  <div class="menu__cor-texto">Azul</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="Azul"
+                    value="Azul"
+                  />
+                </div>
+
+                <div class="menu__cor">
+                  <div class="menu__cor-quadrado"></div>
+                  <div class="menu__cor-texto">Azul</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="Azul"
+                    value="Azul"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu__expansivel">
+            <div
+              class="menu__expansivel-cabecalho menu__expansivel-cabecalho--aberto"
+            >
+              <p class="menu__subtitulo">Tamanho</p>
+            </div>
+
+            <div class="menu__expansivel-conteudo">
+              <div class="menu__tamanhos">
+                <div class="menu__tamanho">
+                  <div class="menu__tamanho-quadrado">36</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="36"
+                    value="36"
+                  />
+                </div>
+
+                <div class="menu__tamanho">
+                  <div class="menu__tamanho-quadrado">36</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="36"
+                    value="36"
+                  />
+                </div>
+                <div class="menu__tamanho">
+                  <div class="menu__tamanho-quadrado">36</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="36"
+                    value="36"
+                  />
+                </div>
+
+                <div class="menu__tamanho">
+                  <div class="menu__tamanho-quadrado">36</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="36"
+                    value="36"
+                  />
+                </div>
+
+                <div class="menu__tamanho">
+                  <div class="menu__tamanho-quadrado">36</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="36"
+                    value="36"
+                  />
+                </div>
+
+                <div class="menu__tamanho">
+                  <div class="menu__tamanho-quadrado">36</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="36"
+                    value="36"
+                  />
+                </div>
+
+                <div class="menu__tamanho">
+                  <div class="menu__tamanho-quadrado">36</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="36"
+                    value="36"
+                  />
+                </div>
+
+                <div class="menu__tamanho">
+                  <div class="menu__tamanho-quadrado">36</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="36"
+                    value="36"
+                  />
+                </div>
+
+                <div class="menu__tamanho">
+                  <div class="menu__tamanho-quadrado">36</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="36"
+                    value="36"
+                  />
+                </div>
+
+                <div class="menu__tamanho">
+                  <div class="menu__tamanho-quadrado">36</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="36"
+                    value="36"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu__expansivel">
+            <div
+              class="menu__expansivel-cabecalho menu__expansivel-cabecalho--aberto"
+            >
+              <p class="menu__subtitulo">Categoria</p>
+            </div>
+
+            <div class="menu__expansivel-conteudo">
+              <div class="menu__categorias">
+                <div class="menu__categoria">
+                  <div class="menu__categoria-quadrado"></div>
+                  <div class="menu__categoria-texto">Camisas</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="Camisas"
+                    value="Camisas"
+                  />
+                </div>
+
+                <div class="menu__categoria">
+                  <div class="menu__categoria-quadrado"></div>
+                  <div class="menu__categoria-texto">Vestidos</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="Vestidos"
+                    value="Vestidos"
+                  />
+                </div>
+
+                <div class="menu__categoria">
+                  <div class="menu__categoria-quadrado"></div>
+                  <div class="menu__categoria-texto">Blusas</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="Blusas"
+                    value="Blusas"
+                  />
+                </div>
+
+                <div class="menu__categoria">
+                  <div class="menu__categoria-quadrado"></div>
+                  <div class="menu__categoria-texto">Tops</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="Tops"
+                    value="Tops"
+                  />
+                </div>
+
+                <div class="menu__categoria">
+                  <div class="menu__categoria-quadrado"></div>
+                  <div class="menu__categoria-texto">Casacos e jaquetas</div>
+                  <input
+                    class="menu__checkbox"
+                    type="checkbox"
+                    name="Casacos e jaquetas"
+                    value="Casacos e jaquetas"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="produtos">
+          <div class="produtos__cabecalho">
+            <button class="produtos__cabecalho-filtrar">Filtrar</button>
+
+            <div class="produtos__cabecalho-ordenarpor">
+              <div class="produtos__cabecalho-imgicone">
+                <img
+                  class="produtos__cabecalho-icone"
+                  src="Imagens/sort-vertical-svgrepo-com.svg"
+                  alt=""
+                />
+              </div>
+              <p class="produtos__subtitulo">Ordenar por:</p>
+              <select class="produtos__select">
+                <option value="maior-preco">Maior preço</option>
+                <option value="menor-preco">Menor preço</option>
+              </select>
+            </div>
+
+            <p class="produtos__cabecalho-textoitens">
+              Mostrando
+              <span class="produtos__cabecalho-itens">24 de 104 itens</span>
+            </p>
+          </div>
+
+          <div class="produtos__grade">
+            <a
+              href="https://www.usereserva.com/camiseta-silk-folhagem0078068/p?skuId=499434"
+              class="produto"
+            >
+              <div class="produto__imagem">
+                <img
+                  src="https://lojausereserva.vtexassets.com/arquivos/ids/8404940-2400-auto?v=638358284054500000&width=2400&height=auto&aspect=true"
+                  alt="Imagem do Produto"
+                />
+                <form
+                  class="produto__botao"
+                  action="{% url 'adicionar_carrinho' produto.id %}"
+                  method="post"
+                >
+                  <button>Adicionar ao Carrinho</button>
+                </form>
+              </div>
+
+              <div class="produto__textos">
+                <p class="produto__titulo">Camiseta Silk Folhagem</p>
+                <div class="produto__preco">
+                  <p class="produto__avista">R$ 349<sup>,00</sup></p>
+                  <p class="produto__parcelado">5x R$ 69<sup>,80</sup></p>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://www.usereserva.com/camiseta-silk-folhagem0078068/p?skuId=499434"
+              class="produto"
+            >
+              <div class="produto__imagem">
+                <img
+                  src="https://lojausereserva.vtexassets.com/arquivos/ids/8404940-2400-auto?v=638358284054500000&width=2400&height=auto&aspect=true"
+                  alt="Imagem do Produto"
+                />
+                <form
+                  class="produto__botao"
+                  action="{% url 'adicionar_carrinho' produto.id %}"
+                  method="post"
+                >
+                  <button>Adicionar ao Carrinho</button>
+                </form>
+              </div>
+
+              <div class="produto__textos">
+                <p class="produto__titulo">Camiseta Silk Folhagem</p>
+                <div class="produto__preco">
+                  <p class="produto__avista">R$ 349<sup>,00</sup></p>
+                  <p class="produto__parcelado">5x R$ 69<sup>,80</sup></p>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://www.usereserva.com/camiseta-silk-folhagem0078068/p?skuId=499434"
+              class="produto"
+            >
+              <div class="produto__imagem">
+                <img
+                  src="https://lojausereserva.vtexassets.com/arquivos/ids/8404940-2400-auto?v=638358284054500000&width=2400&height=auto&aspect=true"
+                  alt="Imagem do Produto"
+                />
+                <form
+                  class="produto__botao"
+                  action="{% url 'adicionar_carrinho' produto.id %}"
+                  method="post"
+                >
+                  <button>Adicionar ao Carrinho</button>
+                </form>
+              </div>
+
+              <div class="produto__textos">
+                <p class="produto__titulo">Camiseta Silk Folhagem</p>
+                <div class="produto__preco">
+                  <p class="produto__avista">R$ 349<sup>,00</sup></p>
+                  <p class="produto__parcelado">5x R$ 69<sup>,80</sup></p>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://www.usereserva.com/camiseta-silk-folhagem0078068/p?skuId=499434"
+              class="produto"
+            >
+              <div class="produto__imagem">
+                <img
+                  src="https://lojausereserva.vtexassets.com/arquivos/ids/8404940-2400-auto?v=638358284054500000&width=2400&height=auto&aspect=true"
+                  alt="Imagem do Produto"
+                />
+                <form
+                  class="produto__botao"
+                  action="{% url 'adicionar_carrinho' produto.id %}"
+                  method="post"
+                >
+                  <button>Adicionar ao Carrinho</button>
+                </form>
+              </div>
+
+              <div class="produto__textos">
+                <p class="produto__titulo">Camiseta Silk Folhagem</p>
+                <div class="produto__preco">
+                  <p class="produto__avista">R$ 349<sup>,00</sup></p>
+                  <p class="produto__parcelado">5x R$ 69<sup>,80</sup></p>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://www.usereserva.com/camiseta-silk-folhagem0078068/p?skuId=499434"
+              class="produto"
+            >
+              <div class="produto__imagem">
+                <img
+                  src="https://lojausereserva.vtexassets.com/arquivos/ids/8404940-2400-auto?v=638358284054500000&width=2400&height=auto&aspect=true"
+                  alt="Imagem do Produto"
+                />
+                <form
+                  class="produto__botao"
+                  action="{% url 'adicionar_carrinho' produto.id %}"
+                  method="post"
+                >
+                  <button>Adicionar ao Carrinho</button>
+                </form>
+              </div>
+
+              <div class="produto__textos">
+                <p class="produto__titulo">Camiseta Silk Folhagem</p>
+                <div class="produto__preco">
+                  <p class="produto__avista">R$ 349<sup>,00</sup></p>
+                  <p class="produto__parcelado">5x R$ 69<sup>,80</sup></p>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://www.usereserva.com/camiseta-silk-folhagem0078068/p?skuId=499434"
+              class="produto"
+            >
+              <div class="produto__imagem">
+                <img
+                  src="https://lojausereserva.vtexassets.com/arquivos/ids/8404940-2400-auto?v=638358284054500000&width=2400&height=auto&aspect=true"
+                  alt="Imagem do Produto"
+                />
+                <form
+                  class="produto__botao"
+                  action="{% url 'adicionar_carrinho' produto.id %}"
+                  method="post"
+                >
+                  <button>Adicionar ao Carrinho</button>
+                </form>
+              </div>
+
+              <div class="produto__textos">
+                <p class="produto__titulo">Camiseta Silk Folhagem</p>
+                <div class="produto__preco">
+                  <p class="produto__avista">R$ 349<sup>,00</sup></p>
+                  <p class="produto__parcelado">5x R$ 69<sup>,80</sup></p>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://www.usereserva.com/camiseta-silk-folhagem0078068/p?skuId=499434"
+              class="produto"
+            >
+              <div class="produto__imagem">
+                <img
+                  src="https://lojausereserva.vtexassets.com/arquivos/ids/8404940-2400-auto?v=638358284054500000&width=2400&height=auto&aspect=true"
+                  alt="Imagem do Produto"
+                />
+                <form
+                  class="produto__botao"
+                  action="{% url 'adicionar_carrinho' produto.id %}"
+                  method="post"
+                >
+                  <button>Adicionar ao Carrinho</button>
+                </form>
+              </div>
+
+              <div class="produto__textos">
+                <p class="produto__titulo">Camiseta Silk Folhagem</p>
+                <div class="produto__preco">
+                  <p class="produto__avista">R$ 349<sup>,00</sup></p>
+                  <p class="produto__parcelado">5x R$ 69<sup>,80</sup></p>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://www.usereserva.com/camiseta-silk-folhagem0078068/p?skuId=499434"
+              class="produto"
+            >
+              <div class="produto__imagem">
+                <img
+                  src="https://lojausereserva.vtexassets.com/arquivos/ids/8404940-2400-auto?v=638358284054500000&width=2400&height=auto&aspect=true"
+                  alt="Imagem do Produto"
+                />
+                <form
+                  class="produto__botao"
+                  action="{% url 'adicionar_carrinho' produto.id %}"
+                  method="post"
+                >
+                  <button>Adicionar ao Carrinho</button>
+                </form>
+              </div>
+
+              <div class="produto__textos">
+                <p class="produto__titulo">Camiseta Silk Folhagem</p>
+                <div class="produto__preco">
+                  <p class="produto__avista">R$ 349<sup>,00</sup></p>
+                  <p class="produto__parcelado">5x R$ 69<sup>,80</sup></p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <section class="rodape__secao-formulario">
+        <div class="rodape__app-newsletter">
+          <div class="rodape__container-newsletter">
+            <div class="rodape__newsletter">
+              <svg
+                class="rodape__logo"
+                viewBox="0 0 18 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.4909 21.4296C17.1766 21.1607 15.7103 20.13 14.9972 19.4579C14.7252 19.189 14.9138 18.8977 14.6201 18.5617C14.2223 18.1584 13.8029 17.7102 13.3629 17.2397C12.9229 16.7468 12.5045 16.2091 12.0852 15.6489C11.708 15.0887 10.556 13.386 9.6131 12.2656C8.60738 11.0558 6.70104 9.57697 6.17657 8.21022C6.15595 8.1206 6.11371 8.03098 6.09308 7.94135C5.96737 7.51564 5.92514 7.02272 5.94674 6.44017C5.96737 5.88003 6.11371 5.34229 6.67943 4.40125C7.308 3.393 7.18228 2.94488 6.97308 2.90008C6.76389 2.85526 6.53309 2.87766 6.76389 1.8246C6.97309 0.905965 6.82675 0.525068 6.70104 0.301011C6.57532 0.0769543 6.42799 -0.0350741 6.30228 0.00973726C6.03022 0.0769544 5.82102 0.749125 5.5696 0.92837C5.50674 0.973182 5.15022 1.17484 5.23371 0.323417C5.25531 0.121766 5.12959 0.0545486 4.94102 0.166577C4.66798 0.345822 4.29084 0.816342 4.08164 1.69016C4.06102 1.73498 4.01879 1.75738 3.99817 1.69016C3.95594 1.57813 3.95593 1.37649 4.01879 1.0404C4.08165 0.726719 4.20736 0.457851 4.08164 0.435445C3.9137 0.390634 3.66228 0.771531 3.47371 1.21964C3.45308 1.28686 3.43244 1.30927 3.41084 1.35408C3.39021 1.39889 3.32736 1.4437 3.32736 1.33167C3.32736 1.26446 3.34798 1.13002 3.39022 0.973182C3.41084 0.905965 3.36959 0.883559 3.34798 0.883559C3.28513 0.861154 3.22227 0.905965 3.13879 0.973182C2.95022 1.13002 2.76164 1.39889 2.6153 1.77978C2.59369 1.8246 2.59369 1.86941 2.57307 1.91422V1.93663C2.57307 1.95903 2.57307 1.95903 2.55245 1.98144C2.55245 2.00385 2.53084 2.02625 2.53084 2.04865C2.53084 2.07107 2.51022 2.11587 2.51022 2.13827V2.16068C2.48959 2.20549 2.48959 2.27271 2.46798 2.33992C2.44736 2.40714 2.44735 2.47436 2.44735 2.54158C2.44735 2.54158 2.44735 2.54158 2.44735 2.56399C2.42672 2.74323 2.42673 2.90008 2.42673 3.07932C2.42673 3.10172 2.42673 3.12413 2.42673 3.16894C2.42673 3.25857 2.21655 3.28097 2.27941 3.48262C2.3845 3.99795 2.57308 4.51328 2.65656 4.78215C2.69879 4.87177 2.63593 4.9838 2.55245 5.02861C2.11245 5.16304 0.896546 5.56635 0.058774 6.12649C0.0175238 6.14889 -0.0247159 6.23852 0.0175165 6.30574C0.0587666 6.37296 0.163858 6.37296 0.20609 6.35054C1.16958 6.01447 2.55244 5.52153 3.22226 6.03687C3.7045 6.41776 3.76736 7.31399 3.45307 8.27743C3.34798 8.63592 3.24388 8.94961 3.13879 9.2857C1.71369 13.2739 4.33308 15.1336 6.72166 17.5085C6.88961 17.6878 7.26675 18.1135 7.58104 18.6289C7.81086 18.9874 8.06229 19.4131 8.02104 19.8164C7.99943 20.1525 7.95818 20.5557 7.83246 21.0935C7.70675 21.7433 7.55944 21.4296 6.59595 21.1607C6.30229 21.0711 6.28166 21.1159 6.09308 21.5416C5.90451 21.9897 5.88388 22.0345 5.92513 22.0794C5.96736 22.1018 7.748 22.1018 7.95818 22.1241C7.97881 22.1241 8.02103 22.1466 8.04166 22.1466C8.25086 22.2586 9.23596 22.7515 9.52864 22.9756C9.59149 23.0204 9.69659 22.998 9.73882 22.9531C9.78007 22.8859 9.75945 22.7963 9.69659 22.7515C9.25659 22.4602 8.35596 21.7433 8.33533 21.5192C8.33533 21.4296 8.39819 21.1159 8.43944 20.8694C8.60739 19.7492 8.628 19.3458 9.04738 19.1218C9.44515 18.9202 10.3674 19.4354 11.0794 19.6147C11.1217 19.6147 11.1423 19.6596 11.1217 19.6819C11.1001 19.7939 11.0372 20.0628 10.9115 20.4886C10.8909 20.5557 10.8486 20.6901 10.7229 20.735C10.5766 20.7798 9.96864 20.5333 9.55025 20.4437C9.3823 20.3989 9.31944 20.2869 8.9423 21.1607C8.92167 21.2279 8.92167 21.2504 8.9423 21.2504C8.96292 21.2727 10.6601 21.3623 10.9115 21.4072C10.9537 21.4072 10.996 21.4296 11.0372 21.4519C11.6658 21.788 12.1903 22.0794 12.5252 22.2809C12.7137 22.393 12.7766 22.4379 12.8395 22.3706C12.9229 22.2809 12.8395 22.1913 12.7766 22.1241C12.7344 22.0794 12.3572 21.788 11.9801 21.5192C11.6245 21.2504 11.2887 21.0711 11.2887 20.9366C11.2887 20.8694 11.3309 20.6454 11.3515 20.5782C11.3731 20.5333 11.4988 20.018 11.5401 19.8388C11.5401 19.7939 11.5823 19.7715 11.6245 19.7939C13.4474 20.4437 14.0131 21.6984 15.396 22.4826C17.0715 23.4013 18.915 22.617 17.4909 21.4296Z"
+                  fill="#E4002B"
+                ></path>
+              </svg>
+              <p class="rodape__texto-newsletter">Assine nossa newsletter</p>
+              <p class="rodape__texto">
+                Cadastre-se e receba promoções exclusivas e saiba tudo antes de
+                todo mundo!
+              </p>
+            </div>
+
+            <form class="formulario" action="">
+              <input
+                class="formulario__input"
+                type="email"
+                name="email"
+                placeholder="Digite seu e-mail"
+              />
+              <input
+                class="formulario__input"
+                type="text"
+                name="name"
+                placeholder="Digite seu nome"
+              />
+              <button class="formulario__botao" type="submit">Cadastrar</button>
+            </form>
+          </div>
+
+          <div class="rodape__container-app">
+            <div class="rodape__app">
+              <p class="rodape__texto-newsletter">Baixe o app</p>
+              <p class="rodape__texto">
+                A Reserva todinha na palma da sua mão, baixe agora mesmo na loja
+                do seu smartphone.
+              </p>
+            </div>
+
+            <div class="rodape__app">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.usereserva"
+                ><img
+                  class="rodape__imagens-loja"
+                  src="https://lojausereserva.vtexassets.com/arquivos/playstorex2.png"
+                  alt="Imagem Play Store"
+              /></a>
+              <a href="https://apps.apple.com/br/app/reserva/id1566861458"
+                ><img
+                  class="rodape__imagens-loja"
+                  src="https://lojausereserva.vtexassets.com/arquivos/appstorex2.png"
+                  alt="Imagem App Store"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="rodape__secao-informacoes">
+        <div class="rodape__container">
+          <div class="rodape__informacoes">
+            <div class="rodape__informacao">
+              <p class="rodape__titulo">Sobre a Reserva</p>
+
+              <ul class="rodape__links">
+                <li><a href="https://www.usereserva.com/1p5p">1P=5P</a></li>
+                <li>
+                  <a href="https://www.usereserva.com/cultura">Cultora</a>
+                </li>
+                <li>
+                  <a href="https://www.arezzo.com.br/sustentabilidade"
+                    >Sustentabilidade</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.usereserva.com/quem-faz">Quem faz</a>
+                </li>
+                <li>
+                  <a href="https://www.usereserva.com/sitemap"
+                    >Mapa de Categorias</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="rodape__informacao">
+              <p class="rodape__titulo">Vem Pra Reserva</p>
+
+              <ul class="rodape__links">
+                <li>
+                  <a href="https://www.usereserva.com/sejafranqueado"
+                    >Seja um Franqueado</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.usereserva.com/lojas">Nossas Lojas</a>
+                </li>
+                <li>
+                  <a href="https://trabalheconosco.vagas.com.br/grupo-reserva/"
+                    >Trabalhe Conosco</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="rodape__informacao">
+              <p class="rodape__titulo">Minha Conta</p>
+
+              <ul class="rodape__links">
+                <li>
+                  <a href="https://www.usereserva.com/account#/wishlist"
+                    >Favoritos</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.usereserva.com/account#/orders"
+                    >Meus Pedidos</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.usereserva.com/account#/wallet"
+                    >Minha Carteira</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.usereserva.com/meu-cartao-de-presente"
+                    >Meu Cartão Presente</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="rodape__informacao">
+              <p class="rodape__titulo">Suporte</p>
+
+              <ul class="rodape__links">
+                <li>
+                  <a href="https://www.usereserva.com/politica-de-privacidade"
+                    >Política de Privacidade</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.usereserva.com/termos-de-uso"
+                    >Termos de Uso</a
+                  >
+                </li>
+                <li>
+                  <a href="https://usereserva.zendesk.com/hc/pt-br"
+                    >Dúvidas Frequentes</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.usereserva.com/"
+                    >Compromisso Best Friday</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://usereserva.s3.sa-east-1.amazonaws.com/PDFs-Institucionais/Reserva+-+1+Ano+em+Compras+-+Regulamento+autorizado+(1).pdf"
+                    >Regulamento ação 1 ano de Reserva</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.usereserva.com/troca-e-devolucao"
+                    >Troca e Devolução</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="rodape__atendimento">
+            <p class="rodape__titulo">Atendimento</p>
+
+            <div class="rodape__ancoras">
+              <a class="rodape__ancora-icone" href="https://pslz.in/reserva"
+                ><img
+                  loading="lazy"
+                  crossorigin="anonymous"
+                  class="rodape__icone"
+                  data-src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/9c4ad5b9-1b4d-4f4d-afce-fc05e3ee3b36___aac616c1eff051d87cbbe7d7ea6090db.svg"
+                  src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/9c4ad5b9-1b4d-4f4d-afce-fc05e3ee3b36___aac616c1eff051d87cbbe7d7ea6090db.svg"
+                />
+                Atendimento em libras
+              </a>
+
+              <div class="rodape__whatsapp">
+                <a class="rodape__ancora-icone" href="http://bit.ly/42nkvKc">
+                  <img
+                    loading="lazy"
+                    crossorigin="anonymous"
+                    class="rodape__icone"
+                    data-src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/d20346db-d162-4873-8518-b8548620acf6___07a0cb802e61ce015e6477828969ca35.svg"
+                    src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/d20346db-d162-4873-8518-b8548620acf6___07a0cb802e61ce015e6477828969ca35.svg"
+                  />
+                  WhatsApp Reserva
+                </a>
+
+                <p class="rodape__horarios">
+                  Segunda a Sexta: 08h às 20h<br />Sábados: 08h às 18h
+                </p>
+              </div>
+
+              <a
+                class="rodape__ancora-icone"
+                href="https://lojausereserva.troquefacil.com.br/order"
+              >
+                <img
+                  loading="lazy"
+                  crossorigin="anonymous"
+                  class="rodape__icone"
+                  data-src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/c9f66e16-18fc-47e7-80d2-8285e4945aab___02415dfe7c43260a39980d26a4a3f438.svg"
+                  src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/c9f66e16-18fc-47e7-80d2-8285e4945aab___02415dfe7c43260a39980d26a4a3f438.svg"
+                />
+                Solicite sua troca
+              </a>
+            </div>
+
+            <div class="rodape__redes">
+              <a href="https://facebook.com/usereserva" class="rodape__rede">
+                <img
+                  src="https://lojausereserva.vtexassets.com/arquivos/fbx1.png"
+                  alt="Logo Facebook"
+                />
+              </a>
+              <a href="https://instagram.com/reserva" class="rodape__rede">
+                <img
+                  src="https://lojausereserva.vtexassets.com/arquivos/insx1.png"
+                  alt="Logo Instagram"
+                />
+              </a>
+              <a
+                href="https://youtube.com/user/usereserva"
+                class="rodape__rede"
+              >
+                <img
+                  src="https://lojausereserva.vtexassets.com/arquivos/ytx1.png"
+                  alt="Logo YouTube"
+                />
+              </a>
+              <a href="https://twitter.com/usereserva" class="rodape__rede">
+                <img
+                  src="https://lojausereserva.vtexassets.com/arquivos/twx1.png"
+                  alt="Logo Twitter"
+                />
+              </a>
+              <a
+                href="https://linkedin.com/company/reserva"
+                class="rodape__rede"
+              >
+                <img
+                  src="https://lojausereserva.vtexassets.com/arquivos/linx1.png"
+                  alt="Logo LinkedIn"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="rodape__container">
+          <div class="rodape__diferenciais">
+            <div class="rodape__diferencial">
+              <img
+                src="https://lojausereserva.vtexassets.com/arquivos/entr3x.png"
+                alt="Imagem Diferencial"
+                class="rodape__diferencial-imagem"
+              />
+              <p class="rodape__diferencial-titulo">Entrega Internacional</p>
+              <p>Entrega para mais de 40 países de forma rápida e segura.</p>
+            </div>
+
+            <div class="rodape__diferencial">
+              <img
+                src="https://lojausereserva.vtexassets.com/arquivos/1p5px2.png"
+                alt="Imagem Diferencial"
+                class="rodape__diferencial-imagem"
+              />
+              <p class="rodape__diferencial-titulo">1P=5P</p>
+              <p>
+                A cada peça vendida, 5 pratos de comida são viabilizados para
+                quem tem fome.
+              </p>
+            </div>
+
+            <div class="rodape__diferencial">
+              <img
+                src="https://lojausereserva.vtexassets.com/arquivos/trocax2.png"
+                alt="Imagem Diferencial"
+                class="rodape__diferencial-imagem"
+              />
+              <p class="rodape__diferencial-titulo">Troca Facilitada</p>
+              <p>
+                Compre no site ou app e troque em uma das lojas em até 7 dias.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rodape__container">
+          <div class="rodape__certificacoes">
+            <div class="rodape__certificacao">
+              <p class="rodape__certificacao-titulo">Somos com Orgulho</p>
+
+              <div class="rodape__certificados">
+                <div class="rodape__certificado">
+                  <img
+                    src="https://lojausereserva.vtexassets.com/arquivos/empb2x.png"
+                    alt="Imagem Certificado"
+                  />
+                </div>
+                <div class="rodape__certificado">
+                  <img
+                    src="https://lojausereserva.vtexassets.com/arquivos/capit2x.png"
+                    alt="Imagem Certificado"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="rodape__certificacao">
+              <p
+                class="rodape__certificacao-titulo rodape__certificacao-titulo--centralizado"
+              >
+                Navegue por Marcas
+              </p>
+
+              <div class="rodape__certificados">
+                <a
+                  href="https://usereserva.com/"
+                  class="rodape__certificado rodape__certificado--opacidade"
+                >
+                  <img
+                    src="https://lojausereserva.vtexassets.com/arquivos/rsvx1.png"
+                    alt="Imagem Certificado"
+                  />
+                </a>
+                <a
+                  href="https://usereserva.com/mini"
+                  class="rodape__certificado rodape__certificado--opacidade"
+                >
+                  <img
+                    src="https://lojausereserva.vtexassets.com/arquivos/rsvminix1.png"
+                    alt="Imagem Certificado"
+                  />
+                </a>
+                <a
+                  href="https://usereserva.com/calcados"
+                  class="rodape__certificado rodape__certificado--opacidade"
+                >
+                  <img
+                    src="https://lojausereserva.vtexassets.com/arquivos/rsvgox1.png"
+                    alt="Imagem Certificado "
+                  />
+                </a>
+                <a
+                  href="https://usereserva.com/reversa"
+                  class="rodape__certificado rodape__certificado--opacidade"
+                >
+                  <img
+                    src="https://lojausereserva.vtexassets.com/arquivos/rvsx1.png"
+                    alt="Imagem Certificado"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="rodape__certificacao">
+              <p class="rodape__certificacao-titulo">Certificações</p>
+
+              <div class="rodape__certificados">
+                <div class="rodape__certificado">
+                  <img
+                    src="https://lojausereserva.vtexassets.com/arquivos/letse2x.png"
+                    alt="Imagem Certificado"
+                  />
+                </div>
+                <div class="rodape__certificado">
+                  <img
+                    src="https://lojausereserva.vtexassets.com/arquivos/ebit2x.png"
+                    alt="Imagem Certificado"
+                  />
+                </div>
+                <div class="rodape__certificado">
+                  <img
+                    src="https://lojausereserva.vtexassets.com/arquivos/recla2x.png"
+                    alt="Imagem Certificado"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="rodape__secao-empresa">
+        <p>
+          AREZZO INDUSTRIA E COMERCIO S.A | CNPJ: 16.590.234/0064-50 | Inscrição
+          Estadual: 12297378 | AV ARTHUR ANTONIO SENDAS, 999 - GALPÃO 300 -
+          PARQUE JURITI - SAO JOÃO DE MERITI | CEP: 25585-085 - RJ
+        </p>
+      </section>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/loja.js"></script>
+  </body>
+</html>

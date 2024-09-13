@@ -1,6 +1,7 @@
 from django.db.models import Max, Min
 from django.core.mail import send_mail
-
+from django.http import HttpResponse
+import csv
 
 def filter_product(products, filter):
     if filter:
@@ -75,3 +76,22 @@ def send_purchase_email(order) :
         
         sender = "dantenavaza2005@gmail.com"
         send_mail(subject, body, sender, [email]) #? email must be in list
+    
+
+def export_csv(data) :
+    collumns = data.model._meta.fields #? gets the metadata of the model`s parameters (fields)
+    collumns_name = [collumn.name for collumn in collumns]
+    
+    response = HttpResponse(content_type="text/csv") #? will return a csv file
+    response["Content-Disposition"] = f"attachment; '{data.model}.csv'"
+
+    csv_creator = csv.writer(response, delimiter=";") #? the rows will come with ';' 
+
+    #? first row will be the collumns
+    csv_creator.writerow(collumns_name)
+
+    #?writing the lines themselves
+    for line in data.values_list():
+        csv_creator.writerow(line)  #? writes each row of data as a list of values to the csv file.
+
+    return response

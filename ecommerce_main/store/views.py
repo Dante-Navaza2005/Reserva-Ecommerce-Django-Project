@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import *
 import uuid
-from .utility import filter_product, min_max_price, order_products, secure_password, send_purchase_email
+from .utility import filter_product, min_max_price, order_products, secure_password, send_purchase_email, export_csv
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from django.core.validators import validate_email
@@ -416,5 +416,13 @@ def manage_store(request):
 
 @login_required
 def export_report(request, report):
-    print(report)
-    return redirect('manage_store')
+    if request.user.groups.filter(name="Team").exists(): #? verify again if the user is part of a management Team
+        if report == "orders" :
+            data = Order.objects.filter(finished=True) #? queryset that searches the whole database
+        elif report == "client" :
+            data = Client.objects.all()
+        elif report == "address" :
+            data = Adres.objects.all()
+        return export_csv(data) #? returns a http response
+    else :
+        return redirect('manage_store')
