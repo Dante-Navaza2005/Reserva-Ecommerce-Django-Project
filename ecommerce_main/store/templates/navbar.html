@@ -1,35 +1,4 @@
 {% load static %}
-<nav>
-    <a href = "{% url 'homepage' %}">Reserva</a>
-    <a href = "{% url 'store' %}">Store</a>
-    <div style="display: flex;">
-        {% for category in categories_navbar %}
-        <div>
-            <a href="{% url 'store' %}{{ category.slug }}">{{ category.name }}</a>
-            <br>
-            {% for type in types_navbar %}
-                <a href="{% url 'store' %}{{ category.slug }}-{{ type.slug }}">{{ type.name }}</a>
-            {% endfor %}
-        </div>
-        {% endfor %}
-    </div>
-
-    {% if request.user.is_authenticated %}
-        <a href = "{% url 'your_account' %}">My Account</a>
-    {% else %}
-        <a href = "{% url 'perform_login' %}">Login</a>
-    {% endif %}
-    
-    {% if Team %}
-        <a href="{% url 'manage_store' %}">Manage Store</a>
-    {% endif %}    
-    
-    <a href = "{% url 'cart' %}">Cart</a>
-    <img src = "{% static 'images/cart.png' %}" width="30" height="30">
-    {{ product_amount_cart }}
-
-</nav>
-
 <header class="cabecalho">
     <div class="cabecalho__menu">
       <img
@@ -116,7 +85,11 @@
 
         <!-- Para exibir o menu do perfil, basta adicionar a classe 'cabecalho__informacoes-perfil--aberto' na div abaixo -->
         <div class="cabecalho__informacoes-perfil ">
+          {% if request.user.client.name %}
+          <p class="cabecalho__texto">Olá, <span>{{ request.user.client.name }}</span>!</p>
+          {% else %}
           <p class="cabecalho__texto">Olá, <span>{{ request.user.client.email }}</span>!</p>
+          {% endif %}
           <a
             class="cabecalho__link cabecalho__link--perfil"
             href="{% url 'your_account' %}"
@@ -135,7 +108,7 @@
           >
           {% endif %}
           <hr />
-          <a class="cabecalho__link cabecalho__link--perfil" href="{% url 'perform_login' %}">Sair</a>
+          <a class="cabecalho__link cabecalho__link--perfil" href="{% url 'perform_logout' %}">Sair</a>
         </div>
       </div>
 
